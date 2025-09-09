@@ -1,0 +1,187 @@
+/* ==== GLOBAL STYLES ==== */
+
+* {margin:0; padding:0; box-sizing:border-box;}
+
+body {
+
+  font-family: Arial, sans-serif;
+
+  background: #1a1a1a;
+
+  color: #fff7ed;
+
+  line-height: 1.6;
+
+  scroll-behavior: smooth;
+
+}
+
+a {color: #ff7f11; text-decoration:none;}
+
+h1,h2,h3 {margin-bottom: 15px; color: #ff7f11;}
+
+section {padding: 80px 20px; max-width: 1000px; margin:auto;}
+
+/* ==== NAVBAR ==== */
+
+nav {
+
+  position: fixed; top:0; left:0; width:100%;
+
+  background: rgba(26,26,26,0.95); backdrop-filter: blur(10px);
+
+  padding: 10px 30px; display:flex; justify-content:space-between; align-items:center;
+
+  z-index:1000;
+
+}
+
+nav ul {display:flex; list-style:none;}
+
+nav ul li {margin: 0 10px;}
+
+nav ul li a:hover {color:#ffb347;}
+
+/* ==== HOME ==== */
+
+#home {
+
+  height:100vh; display:flex; flex-direction:column;
+
+  justify-content:center; align-items:center; text-align:center;
+
+}
+
+.home-container {display:flex; flex-direction:column; justify-content:center; align-items:center; gap:20px;}
+
+.profile-photo {
+
+  width:180px; height:180px; border-radius:50%;
+
+  border:5px solid #ff7f11;
+
+  box-shadow: 0 0 20px #ff7f11, 0 0 40px #ffa500;
+
+  animation: glow 2s infinite alternate;
+
+  object-fit: cover;
+
+}
+
+@keyframes glow {from { box-shadow: 0 0 15px #ff7f11; } to { box-shadow: 0 0 35px #ffa500; }}
+
+.typing {
+
+  font-size: 22px; font-weight: bold; color: #ffb347;
+
+  border-right: 2px solid #ffb347;
+
+  animation: blink 0.7s infinite;
+
+}
+
+@keyframes blink {50% {border-color: transparent;}}
+
+/* Upload Button */
+
+#upload-photo {
+
+  margin-top: 15px;
+
+  color: #fff7ed;
+
+  background: #333;
+
+  border: 1px solid #ff7f11;
+
+  padding: 8px 12px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+}
+
+#upload-photo:hover {background: #ff7f11; color: #1a1a1a;}
+
+/* ==== ABOUT ==== */
+
+#about p {max-width:700px; margin:auto;}
+
+/* ==== SKILLS ==== */
+
+.skills {
+
+  display:grid; grid-template-columns: repeat(auto-fit,minmax(120px,1fr));
+
+  gap:20px; text-align:center;
+
+}
+
+.skill {
+
+  padding:20px; border:1px solid #ff7f11; border-radius:10px;
+
+  background:#333; transition:0.3s;
+
+}
+
+.skill:hover {transform:scale(1.05); background:#444;}
+
+/* ==== CERTIFICATES ==== */
+
+.certificates {display:flex; flex-wrap:wrap; gap:20px; justify-content:center;}
+
+.certificate {
+
+  width:200px; padding:15px; border-radius:10px;
+
+  background:#333; cursor:pointer; text-align:center;
+
+  transition:0.3s;
+
+}
+
+.certificate:hover {background:#444;}
+
+/* Modal */
+
+.modal {
+
+  display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+
+  background:rgba(0,0,0,0.8); justify-content:center; align-items:center;
+
+}
+
+.modal-content {
+
+  background:#333; padding:30px; border-radius:10px;
+
+  max-width:500px; text-align:center;
+
+}
+
+.close {color:#ff5f5f; cursor:pointer; font-size:22px; float:right;}
+
+/* ==== SPORTS ==== */
+
+.sports img {width:200px; border-radius:10px; margin:10px;}
+
+/* ==== CONTACT ==== */
+
+.contact-links a {
+
+  display:inline-block; margin:10px; padding:10px 20px;
+
+  border:1px solid #ff7f11; border-radius:8px;
+
+  transition:0.3s;
+
+}
+
+.contact-links a:hover {background:#ff7f11; color:#1a1a1a;}
+
+/* ==== FOOTER ==== */
+
+footer {background:#333; padding:20px; text-align:center; margin-top:50px;}
